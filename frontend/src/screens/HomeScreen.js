@@ -9,8 +9,6 @@ import Paginate from '../components/Paginate'
 import ProductCarousel from '../components/ProductCarousel'
 import Meta from '../components/Meta'
 import { listProducts } from '../actions/productActions'
-import CC from '../components/Carousel.js'
-import './App.css'
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword
@@ -28,17 +26,14 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      {/* <Meta /> */}
-      {/* {!keyword ? (
+      <Meta />
+      {!keyword ? (
         <ProductCarousel />
       ) : (
         <Link to='/' className='btn btn-light'>
           Go Back
         </Link>
-      )} */}
-      <div className="App">
-        <CC/>
-      </div>
+      )}
       <h1>Latest Products</h1>
       {loading ? (
         <Loader />

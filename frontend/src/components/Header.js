@@ -5,7 +5,6 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
-import './navbar.css'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -19,7 +18,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar className = "navbar" variant='dark' expand='lg' collapseOnSelect>
+      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>ProShop</Navbar.Brand>
